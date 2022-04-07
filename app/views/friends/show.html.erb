@@ -1,0 +1,25 @@
+<div>
+  <div class="p-5 mb-4 bg-light rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold">
+        <%= @friend.first_name %> <%= @friend.last_name %>
+      </h1> 
+      <p class="col-md-8 fs-4">
+      <%= @friend.email %> |
+      <%= @friend.phone %> |
+      <%= @friend.twitter %>
+      </p>
+    </div>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <div>
+          <%= link_to "Edit", edit_friend_path(@friend), class:"btn btn-dark" %>
+          <%= link_to "Back to friends", friends_path, class:"btn btn-outline-secondary" %>
+        </div>
+        <div>
+          <%= button_to "Destroy this friend", @friend, method: :delete, class:"btn btn-danger" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
